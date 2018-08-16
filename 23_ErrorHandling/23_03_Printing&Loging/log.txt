@@ -1,0 +1,1 @@
+2018/08/15 15:43:21 log err happened open no-file.txt: no such file or directory

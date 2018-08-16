@@ -1,0 +1,7 @@
+https://golang.org/doc/faq#exceptions
+
+https://en.wikipedia.org/wiki/Exception_handling#Criticism
+
+https://en.wikipedia.org/wiki/Communicating_sequential_processes
+
+https://blog.golang.org/error-handling-and-go
