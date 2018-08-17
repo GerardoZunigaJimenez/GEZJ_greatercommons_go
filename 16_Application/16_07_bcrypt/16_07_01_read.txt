@@ -1,0 +1,5 @@
+https://godoc.org/golang.org/x/crypto/bcrypt
+
+at terminal
+go get golang.org/x/crypto/bcrypt
+go get -u golang.org/x/crypto/bcrypt
