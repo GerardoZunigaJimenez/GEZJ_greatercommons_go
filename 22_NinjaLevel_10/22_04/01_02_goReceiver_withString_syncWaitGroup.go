@@ -10,7 +10,7 @@ var iterations = 10
 //Synchronization
 var wg sync.WaitGroup
 var mu sync.Mutex
-var delta int = 1
+var delta = 1
 
 func main() {
 	c := make(chan string, iterations)

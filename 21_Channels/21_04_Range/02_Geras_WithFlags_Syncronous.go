@@ -8,8 +8,8 @@ import (
 
 var wg sync.WaitGroup
 var mu sync.Mutex
-var counter int = 10
-var delta int = counter * 2
+var counter = 10
+var delta = counter * 2
 
 func main() {
 	wg.Add(delta)

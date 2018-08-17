@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var count int = 50
+var count = 50
 
 func foo(f, b chan int) {
 	for i := 0; i < count * 2; i++ {

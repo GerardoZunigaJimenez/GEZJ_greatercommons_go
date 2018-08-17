@@ -6,7 +6,7 @@ import (
 	"math/rand"
 )
 
-type Message struct {
+type message struct {
 	str  string
 	wait chan bool
 }
@@ -26,14 +26,14 @@ func main() {
 	fmt.Println("You're both boring; I'm leaving.")
 }
 
-func boring(msg string) <-chan Message { // Returns receive-only channel of strings.
-	c := make(chan Message)
+func boring(msg string) <-chan message { // Returns receive-only channel of strings.
+	c := make(chan message)
 
 	waitForIt := make(chan bool) // Shared between all messages.
 
 	go func() { // We launch the goroutine from inside the function.
 		for i := 0; ; i++ {
-			c <- Message{
+			c <- message{
 				str:  fmt.Sprintf("%s: %d", msg, i),
 				wait: waitForIt,
 			}
@@ -44,8 +44,8 @@ func boring(msg string) <-chan Message { // Returns receive-only channel of stri
 	return c // Return the channel to the caller.
 }
 
-func fanIn(inputs ... <-chan Message) <-chan Message { // HL
-	c := make(chan Message)
+func fanIn(inputs ... <-chan message) <-chan message { // HL
+	c := make(chan message)
 	for i := range inputs {
 		input := inputs[i] // New instance of inputs  <-chan Message for each loop.
 		go func() {

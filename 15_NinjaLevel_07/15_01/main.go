@@ -1,5 +1,4 @@
-package _5_01
-
+package main
 import "fmt"
 
 func main() {

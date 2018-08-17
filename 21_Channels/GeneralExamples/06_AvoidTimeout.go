@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math/rand"
 )
-func First(query string, replicas ...Search) Result {
-	c := make(chan Result)
+func first(query string, replicas ...search) result {
+	c := make(chan result)
 	searchReplica := func(a int) { c <- replicas[a](query) }
 	for i := range replicas {
 		go searchReplica(i)
@@ -17,7 +17,7 @@ func First(query string, replicas ...Search) Result {
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	start := time.Now()
-	result := First("golang",
+	result := first("golang",
 		fakeSearch("replica 1"),
 		fakeSearch("replica 2"))
 	elapsed := time.Since(start)
@@ -25,14 +25,14 @@ func main() {
 	fmt.Println(elapsed)
 }
 
-type Result string
+type result string
 
-type Search func(query string) Result
+type search func(query string) result
 
-func fakeSearch(kind string) Search {
-	return func(query string) Result {
+func fakeSearch(kind string) search {
+	return func(query string) result {
 		time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
-		return Result(fmt.Sprintf("%s result for %q\n", kind, query))
+		return result(fmt.Sprintf("%s result for %q\n", kind, query))
 	}
 }
 

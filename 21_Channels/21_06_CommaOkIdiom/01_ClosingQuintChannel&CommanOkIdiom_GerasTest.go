@@ -20,7 +20,7 @@ func main() {
 func send(even, odd chan<- int, quit chan<- int) {
 	for i := 0; i < 100; i++ {
 		/* Adding negative numbers when i is odd */
-		var value int = i
+		var value = i
 		for c := 0; c < i; c++ {
 			if i%2 != 0 {
 				value = value * -1

@@ -6,16 +6,16 @@ import (
 	"fmt"
 )
 
-type Result string
-type Search func(query string) Result
+type result string
+type search func(query string) result
 
 var (
-	Web1   = fakeSearch("web1")
-	Web2   = fakeSearch("web2")
-	Image1 = fakeSearch("image1")
-	Image2 = fakeSearch("image2")
-	Video1 = fakeSearch("video1")
-	Video2 = fakeSearch("video2")
+	web1   = fakeSearch("web1")
+	web2   = fakeSearch("web2")
+	image1 = fakeSearch("image1")
+	image2 = fakeSearch("image2")
+	video1 = fakeSearch("video1")
+	video2 = fakeSearch("video2")
 )
 /*
 Google Search 3.0
@@ -23,8 +23,8 @@ Reduce tail latency using replicated search servers.
 
 https://talks.golang.org/2012/concurrency.slide#50
  */
-func First(query string, replicas ...Search) Result {
-	c := make(chan Result)
+func first(query string, replicas ...search) result {
+	c := make(chan result)
 	searchReplica := func(a int) { c <- replicas[a](query) }
 	for i := range replicas {
 		go searchReplica(i)
@@ -35,7 +35,7 @@ func First(query string, replicas ...Search) Result {
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	start := time.Now()
-	result := First("golang",
+	result := first("golang",
 		fakeSearch("replica 1"),
 		fakeSearch("replica 2"))
 	elapsed := time.Since(start)
@@ -43,11 +43,11 @@ func main() {
 	fmt.Println(elapsed)
 }
 
-func Google(query string) (results []Result) {
-	c := make(chan Result)
-	go func() { c <- First(query, Web1, Web2) }()
-	go func() { c <- First(query, Image1, Image2) }()
-	go func() { c <- First(query, Video1, Video2) }()
+func google(query string) (results []result) {
+	c := make(chan result)
+	go func() { c <- first(query, web1, web2) }()
+	go func() { c <- first(query, image1, image2) }()
+	go func() { c <- first(query, video1, video2) }()
 
 	timeout := time.After(80 * time.Millisecond)
 
@@ -63,9 +63,9 @@ func Google(query string) (results []Result) {
 	return
 }
 
-func fakeSearch(kind string) Search {
-	return func(query string) Result {
+func fakeSearch(kind string) search {
+	return func(query string) result {
 		time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
-		return Result(fmt.Sprintf("%s result for %q\n", kind, query))
+		return result(fmt.Sprintf("%s result for %q\n", kind, query))
 	}
 }

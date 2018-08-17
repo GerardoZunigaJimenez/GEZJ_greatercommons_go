@@ -22,8 +22,8 @@ func main() {
 
 func sqrt(f float64) (float64, error) {
 	if f < 0 {
-		ErrNorgateMath := fmt.Errorf("norgate math again: square root of negative number: %v", f)
-		return 0, ErrNorgateMath
+		errNorgateMath := fmt.Errorf("norgate math again: square root of negative number: %v", f)
+		return 0, errNorgateMath
 	}
 	return 42, nil
 }

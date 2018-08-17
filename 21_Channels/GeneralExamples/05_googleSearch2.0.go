@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-type Result string
+type result string
 
 /*
 Google Search 2.0
@@ -14,11 +14,11 @@ Run the Web, Image, and Video searches concurrently, and wait for all results.
 
 No locks. No condition variables. No callbacks.
  */
-func Google(query string) (results []Result) {
-	c := make(chan Result)
-	go func() { c <- Web(query) }()
-	go func() { c <- Image(query) }()
-	go func() { c <- Video(query) }()
+func google(query string) (results []result) {
+	c := make(chan result)
+	go func() { c <- web(query) }()
+	go func() { c <- image(query) }()
+	go func() { c <- video(query) }()
 
 	for i := 0; i < 3; i++ {
 		result := <-c
@@ -28,24 +28,24 @@ func Google(query string) (results []Result) {
 }
 
 var (
-	Web   = fakeSearch("web")
-	Image = fakeSearch("image")
-	Video = fakeSearch("video")
+	web   = fakeSearch("web")
+	image = fakeSearch("image")
+	video = fakeSearch("video")
 )
 
-type Search func(query string) Result
+type search func(query string) result
 
-func fakeSearch(kind string) Search {
-	return func(query string) Result {
+func fakeSearch(kind string) search {
+	return func(query string) result {
 		time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
-		return Result(fmt.Sprintf("%s result for %q\n", kind, query))
+		return result(fmt.Sprintf("%s result for %q\n", kind, query))
 	}
 }
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	start := time.Now()
-	results := Google("golang")
+	results := google("golang")
 	elapsed := time.Since(start)
 
 	fmt.Println(results)
