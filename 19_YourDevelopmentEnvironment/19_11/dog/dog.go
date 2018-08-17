@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"greatercommons/19_YourDevelopmentEnvironment/12_11/cat"
+	"greatercommons/19_YourDevelopmentEnvironment/19_11/cat"
 )
 
 func main() {
