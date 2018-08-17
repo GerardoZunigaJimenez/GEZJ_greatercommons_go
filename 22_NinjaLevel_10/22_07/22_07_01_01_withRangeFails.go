@@ -28,7 +28,6 @@ func gen(c chan<- int) {
 			}
 		}()
 	}
-	close(c)
 }
 
 func channelReader(c <-chan int) {
