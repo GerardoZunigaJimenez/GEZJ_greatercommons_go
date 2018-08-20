@@ -1,0 +1,3 @@
+Check the performance for similar actions with different functions
+
+go test -bench .

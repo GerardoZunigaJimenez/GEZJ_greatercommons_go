@@ -1,0 +1,16 @@
+Coverage in programming is how much of our code is covered by tests. We can use the “-cover” flag to run coverage
+ analysis on our code. We can use the flag and required file name “-coverprofile <some file name>”
+ to write our coverage analysis to a file.
+
+--to execute coverage at console
+    go test -cover ./...
+
+--create a file.out to track the coverage by actions, and it is parsed by the browser
+    CMD command:
+        go test -coverprofile cout
+    CMD command:
+        go tool cover -html=c.out
+
+-- invoke go tool help
+    CMD command:
+        go tool cover -help

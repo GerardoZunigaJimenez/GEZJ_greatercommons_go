@@ -1,0 +1,3 @@
+execute benchmarking at console
+
+go test -bench .
