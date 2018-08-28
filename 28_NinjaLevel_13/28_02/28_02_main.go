@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"greatercommons/28_NinjaLevel_13/28_02/quote"
-	"greatercommons/28_NinjaLevel_13/28_02/word"
+	"GEZJ_greatercommons_go/28_NinjaLevel_13/28_02/quote"
+	"GEZJ_greatercommons_go/28_NinjaLevel_13/28_02/word"
 )
 
 func main() {

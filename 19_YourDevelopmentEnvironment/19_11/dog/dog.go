@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"greatercommons/19_YourDevelopmentEnvironment/19_11/cat"
+	"GEZJ_greatercommons_go/19_YourDevelopmentEnvironment/19_11/cat"
 )
 
 func main() {

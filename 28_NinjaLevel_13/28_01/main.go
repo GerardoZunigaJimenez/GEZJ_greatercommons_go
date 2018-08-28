@@ -2,7 +2,7 @@ package dog
 
 import (
 	"fmt"
-	"greatercommons/28_NinjaLevel_13/28_01/dog"
+	"GEZJ_greatercommons_go/28_NinjaLevel_13/28_01/dog"
 )
 
 type canine struct {

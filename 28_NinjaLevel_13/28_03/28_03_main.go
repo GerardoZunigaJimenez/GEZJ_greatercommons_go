@@ -1,7 +1,7 @@
 package main
 import (
 	"fmt"
-	"greatercommons/28_NinjaLevel_13/28_03/mymath"
+	"GEZJ_greatercommons_go/28_NinjaLevel_13/28_03/mymath"
 )
 
 func main() {

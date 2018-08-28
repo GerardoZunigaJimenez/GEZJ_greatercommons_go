@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"greatercommons/27_TestingAndBenchmarking/27_05_Benchmark/saying"
+	"GEZJ_greatercommons_go/27_TestingAndBenchmarking/27_05_Benchmark/saying"
 )
 
 func main() {

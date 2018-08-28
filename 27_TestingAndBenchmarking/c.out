@@ -1,0 +1,13 @@
+mode: set
+greatercommons/27_TestingAndBenchmarking/27_02_TableTests/27_02_01.go:8.13,12.2 3 0
+greatercommons/27_TestingAndBenchmarking/27_02_TableTests/27_02_01.go:14.27,16.23 2 1
+greatercommons/27_TestingAndBenchmarking/27_02_TableTests/27_02_01.go:19.2,19.12 1 1
+greatercommons/27_TestingAndBenchmarking/27_02_TableTests/27_02_01.go:16.23,18.3 1 1
+greatercommons/27_TestingAndBenchmarking/27_03_ExampleTests/acdc/27_03_01.go:5.25,7.23 2 1
+greatercommons/27_TestingAndBenchmarking/27_03_ExampleTests/acdc/27_03_01.go:10.2,10.10 1 1
+greatercommons/27_TestingAndBenchmarking/27_03_ExampleTests/acdc/27_03_01.go:7.23,9.3 1 1
+greatercommons/27_TestingAndBenchmarking/27_05_Benchmark/saying/27_05_01_saying.go:5.29,7.2 1 1
+greatercommons/27_TestingAndBenchmarking/27_01_introduction/27_01_01.go:25.13,29.2 3 0
+greatercommons/27_TestingAndBenchmarking/27_01_introduction/27_01_01.go:31.27,33.23 2 1
+greatercommons/27_TestingAndBenchmarking/27_01_introduction/27_01_01.go:36.2,36.12 1 1
+greatercommons/27_TestingAndBenchmarking/27_01_introduction/27_01_01.go:33.23,35.3 1 1
