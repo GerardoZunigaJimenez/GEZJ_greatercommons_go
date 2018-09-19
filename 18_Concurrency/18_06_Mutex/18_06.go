@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	"sync"
+	"time"
 )
 
 func main() {
@@ -22,7 +23,7 @@ func main() {
 		go func() {
 			mu.Lock()
 			v := counter
-			//time.Sleep(time.Second)
+			time.Sleep(time.Second)
 			runtime.Gosched()
 			v++
 			counter = v
