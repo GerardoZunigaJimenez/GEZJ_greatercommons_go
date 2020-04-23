@@ -10,7 +10,7 @@ func main() {
 		`no_dr`:           []string{`Being evil`, `Ice cream`, `Sunsets`},
 	}
 
-	m["fleaming_ian"] = []string{"steaks","cigars","espionage"}
+	m["fleaming_ian"] = []string{"steaks", "cigars", "espionage"}
 
 	for i, v1 := range m {
 		fmt.Println("record: ", i)

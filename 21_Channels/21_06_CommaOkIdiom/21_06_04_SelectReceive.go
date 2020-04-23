@@ -5,7 +5,7 @@ import "fmt"
 var count = 50
 
 func foo(f, b chan int) {
-	for i := 0; i < count * 2; i++ {
+	for i := 0; i < count*2; i++ {
 		select {
 		case v := <-f:
 			fmt.Println("from foo:", v)

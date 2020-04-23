@@ -8,7 +8,7 @@ import (
 
 //https://godoc.org/encoding/json
 
-func main(){
+func main() {
 	type ColorGroup struct {
 		ID     int
 		Name   string

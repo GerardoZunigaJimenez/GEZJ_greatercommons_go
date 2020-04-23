@@ -31,7 +31,7 @@ func gen(c chan<- int) {
 }
 
 func channelReader(c <-chan int) {
-	for i:= 0; i< (goRoutines * iteraionByGoRoutine); i++{
+	for i := 0; i < (goRoutines * iteraionByGoRoutine); i++ {
 		fmt.Println("iterarion #", i, " with Random Number:", <-c)
 	}
 }

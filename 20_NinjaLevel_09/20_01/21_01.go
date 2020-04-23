@@ -18,16 +18,15 @@ func main() {
 }
 
 func goRuntine1() {
-	for i := 0; i<10; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println("goRuntine1:", i)
 	}
 
 	wg.Done()
 }
 
-
 func goRuntine2() {
-	for i := 0; i<10; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println("goRuntine2:", i)
 	}
 

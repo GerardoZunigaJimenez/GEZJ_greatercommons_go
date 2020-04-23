@@ -12,24 +12,24 @@ func main() {
 	p1 := person{
 		"James",
 		"Bond",
-		[]string {"vanilla", "chocolate"},
+		[]string{"vanilla", "chocolate"},
 	}
 
 	p2 := person{
 		"Miss",
 		"Moneypenny",
-		[]string {"strawberry", "peach"},
+		[]string{"strawberry", "peach"},
 	}
 
 	fmt.Println(p1.first, p1.last)
-	for _,v := range p1.iceCream {
-		fmt.Printf("\t%v",v)
+	for _, v := range p1.iceCream {
+		fmt.Printf("\t%v", v)
 	}
 
 	fmt.Println()
 
 	fmt.Println(p2.first, p2.last)
-	for _,v := range p2.iceCream {
-		fmt.Printf("\t%v",v)
+	for _, v := range p2.iceCream {
+		fmt.Printf("\t%v", v)
 	}
 }

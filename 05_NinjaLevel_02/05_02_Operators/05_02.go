@@ -17,6 +17,4 @@ func main() {
 	fmt.Println(e)
 	fmt.Println(f)
 
-
-
 }

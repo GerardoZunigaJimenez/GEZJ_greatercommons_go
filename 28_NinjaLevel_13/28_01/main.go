@@ -1,8 +1,8 @@
 package dog
 
 import (
-	"fmt"
 	"GEZJ_greatercommons_go/28_NinjaLevel_13/28_01/dog"
+	"fmt"
 )
 
 type canine struct {

@@ -1,9 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
-	"fmt"
 )
 
 type result string
@@ -17,12 +17,13 @@ var (
 	video1 = fakeSearch("video1")
 	video2 = fakeSearch("video2")
 )
+
 /*
 Google Search 3.0
 Reduce tail latency using replicated search servers.
 
 https://talks.golang.org/2012/concurrency.slide#50
- */
+*/
 func first(query string, replicas ...search) result {
 	c := make(chan result)
 	searchReplica := func(a int) { c <- replicas[a](query) }

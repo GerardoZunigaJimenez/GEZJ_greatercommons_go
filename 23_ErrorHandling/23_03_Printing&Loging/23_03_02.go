@@ -1,9 +1,9 @@
 package main
 
 import (
-	"os"
 	"fmt"
 	"log"
+	"os"
 )
 
 //Print calls Output to print to the standard logger.  Arguments are handle in the manner of fmt.Println
@@ -17,7 +17,7 @@ func main() {
 
 	log.SetOutput(f)
 
-	f2, err:= os.Open("no-file.txt")
+	f2, err := os.Open("no-file.txt")
 	if err != nil {
 		log.Println("log err happened", err)
 		panic(err)

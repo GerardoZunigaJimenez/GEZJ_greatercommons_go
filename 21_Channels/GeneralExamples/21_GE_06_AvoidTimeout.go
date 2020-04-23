@@ -1,10 +1,11 @@
 package main
 
 import (
-	"time"
 	"fmt"
 	"math/rand"
+	"time"
 )
+
 func first(query string, replicas ...search) result {
 	c := make(chan result)
 	searchReplica := func(a int) { c <- replicas[a](query) }
@@ -35,5 +36,3 @@ func fakeSearch(kind string) search {
 		return result(fmt.Sprintf("%s result for %q\n", kind, query))
 	}
 }
-
-

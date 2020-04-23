@@ -1,8 +1,8 @@
 package saying
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestGreet(t *testing.T) {
@@ -19,7 +19,7 @@ func ExampleGreet() {
 }
 
 func BenchmarkGreet(b *testing.B) {
-	for i:=0; i< b.N; i++{
+	for i := 0; i < b.N; i++ {
 		Greet("James")
 	}
 }

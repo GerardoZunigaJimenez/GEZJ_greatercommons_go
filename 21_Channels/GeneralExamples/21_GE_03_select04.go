@@ -1,18 +1,18 @@
 package main
 
 import (
-	"time"
 	"fmt"
 	"math/rand"
+	"time"
 )
 
+func cleanup() {}
 
-func cleanup(){}
 /*
 Timeout for whole conversation using select
 Create the timer once, outside the loop, to time out the entire conversation.
 (In the previous program, we had a timeout for each message.)
- */
+*/
 func main() {
 	quit := make(chan string)
 	c := boring("Joe", quit)

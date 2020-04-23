@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	foo()
 
 	func() {
 		fmt.Println("anonymous fun ran")
 	}()
 
-	func(x int){
+	func(x int) {
 		fmt.Println("The meaning of life", x)
 	}(42)
 }

@@ -14,10 +14,10 @@ func main() {
 			"Dr No":      45,
 			"Q":          70,
 		},
-		favDrinks: []string{"martini", "rum", "coke",},
+		favDrinks: []string{"martini", "rum", "coke"},
 	}
 
-	fmt.Println("Name: ",s.first)
+	fmt.Println("Name: ", s.first)
 	fmt.Println("Friends: ")
 	for key, value := range s.friends {
 		fmt.Printf("\tName: %v,\tAge:%v\n", key, value)

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"time"
 	"sync"
+	"time"
 )
 
 var source = rand.NewSource(time.Now().UnixNano())

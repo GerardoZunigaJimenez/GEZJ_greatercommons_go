@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	var jsonBlob = []byte(`[
 	{"Name": "Platypus", "Order": "Monotremata"},
 	{"Name": "Quoll",    "Order": "Dasyuromorphia"}

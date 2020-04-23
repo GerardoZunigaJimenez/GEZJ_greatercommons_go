@@ -2,9 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
 	"log"
-	"errors"
 )
 
 type person struct {
@@ -13,7 +13,7 @@ type person struct {
 	Sayings []string
 }
 
-type personWithErrors struct{
+type personWithErrors struct {
 	person
 	err error
 }
@@ -31,7 +31,7 @@ func main() {
 
 	bs, err := toJSON(p1)
 	if err != nil {
-		log.Fatalln( personWithErrors{ p1, err})
+		log.Fatalln(personWithErrors{p1, err})
 	}
 
 	fmt.Println(string(bs))
@@ -44,6 +44,6 @@ func toJSON(a interface{}) ([]byte, error) {
 	if err != nil {
 		return nil, fmt.Errorf("There was an error marshalling %v in toJSON: %v", a, err)
 	}
-	err = errors.New( fmt.Sprintf("Provoked Failure at attribute %v", a))
+	err = errors.New(fmt.Sprintf("Provoked Failure at attribute %v", a))
 	return bs, err
 }

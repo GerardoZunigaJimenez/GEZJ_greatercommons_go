@@ -1,8 +1,9 @@
 package main
+
 import "fmt"
 
 func main() {
-	m := map[string] interface{}{
+	m := map[string]interface{}{
 		"i": 32,
 		"s": "Hello World",
 		"f": 56.25,
@@ -21,7 +22,7 @@ func main() {
 	fmt.Printf("\tThe variable '%T' with the address '%v' has the value '%v'\n", b, &b, b)
 
 	fmt.Println("\nPrinting variables with a map")
-	for k,v := range m {
+	for k, v := range m {
 		fmt.Printf("\tThe variable '%v' with the type '%T' and the address '%v' has the value '%v'\n", k, v, &v, v)
 	}
 }

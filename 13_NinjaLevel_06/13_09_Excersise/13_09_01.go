@@ -31,13 +31,12 @@ func main() {
 
 	oList := []func(...int) int{sum, subtraction, multiplication}
 
-
 	fmt.Printf("Operation List Type: %T\n", oList)
 	fmt.Println("Numbers that will be operated: ", numbers)
 
 	fmt.Println()
-	for _, function := range oList{
-		fmt.Printf("The operation '%T' has the result of %v\n", function ,function(numbers...))
+	for _, function := range oList {
+		fmt.Printf("The operation '%T' has the result of %v\n", function, function(numbers...))
 	}
 
 }

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 type message struct {
@@ -15,9 +15,9 @@ func main() {
 	c := fanIn(boring("Joe"), boring("Ann"))
 
 	for i := 0; i < 5; i++ {
-		msg1 := <-c;
+		msg1 := <-c
 		fmt.Println(msg1.str)
-		msg2 := <-c;
+		msg2 := <-c
 		fmt.Println(msg2.str)
 		msg1.wait <- true
 		msg2.wait <- true
@@ -44,7 +44,7 @@ func boring(msg string) <-chan message { // Returns receive-only channel of stri
 	return c // Return the channel to the caller.
 }
 
-func fanIn(inputs ... <-chan message) <-chan message { // HL
+func fanIn(inputs ...<-chan message) <-chan message { // HL
 	c := make(chan message)
 	for i := range inputs {
 		input := inputs[i] // New instance of inputs  <-chan Message for each loop.

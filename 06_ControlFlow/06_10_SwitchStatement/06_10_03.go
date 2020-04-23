@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	n := "Bond"
-	switch n{
+	switch n {
 	case "MoneyPennny", "Bond", "Dr no":
 		fmt.Println("miss money or bond or dr no")
 	case "M":

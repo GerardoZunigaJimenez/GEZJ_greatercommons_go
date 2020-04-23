@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math/rand"
 	"fmt"
+	"math/rand"
 )
 
 var iterations = 10
@@ -27,7 +27,7 @@ func randomGenerator(c chan<- int) {
 
 func channelReader(c <-chan int) {
 	i := 0
-	for	v := range c{
+	for v := range c {
 		i++
 		fmt.Println("iterarion #", i, " with Random Number:", v)
 	}

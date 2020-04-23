@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	x := 42
 	y := "James Bond"
 	z := true
@@ -11,5 +11,5 @@ func main()  {
 	fmt.Println(y)
 	fmt.Println(z)
 
-	fmt.Printf("%d %v %v", x,y,z)
+	fmt.Printf("%d %v %v", x, y, z)
 }

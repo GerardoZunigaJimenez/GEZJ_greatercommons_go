@@ -1,8 +1,8 @@
 package mymath
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 type test struct {
@@ -11,10 +11,10 @@ type test struct {
 }
 
 var sTest = []test{
-	test{[]int{1, 4, 6, 8, 100}, 6,},
-	test{[]int{0, 8, 10, 1000}, 9,},
-	test{[]int{9000, 4, 10, 8, 6, 12}, 9,},
-	test{[]int{123, 744, 140, 200}, 170,},
+	test{[]int{1, 4, 6, 8, 100}, 6},
+	test{[]int{0, 8, 10, 1000}, 9},
+	test{[]int{9000, 4, 10, 8, 6, 12}, 9},
+	test{[]int{123, 744, 140, 200}, 170},
 }
 
 func TestCenteredAvg(t *testing.T) {

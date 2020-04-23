@@ -6,11 +6,11 @@ func main() {
 
 	c := make(chan int)
 	// send
-	for i:= 0; i<10; i++ {
+	for i := 0; i < 10; i++ {
 		go foo(c, i)
 	}
 	// receive
-	for i:= 0; i<10; i++ {
+	for i := 0; i < 10; i++ {
 		bar(c)
 	}
 	fmt.Println("about to exit")

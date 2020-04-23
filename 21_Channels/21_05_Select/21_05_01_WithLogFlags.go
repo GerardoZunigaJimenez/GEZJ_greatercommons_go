@@ -11,7 +11,6 @@ var mu sync.Mutex
 func main() {
 	wg.Add(2)
 
-
 	eve := make(chan int)
 	odd := make(chan int)
 	quit := make(chan int)
@@ -33,7 +32,7 @@ func send(e, o, q chan<- int) {
 		} else {
 			o <- i
 		}
-		fmt.Println("\tAdding",i)
+		fmt.Println("\tAdding", i)
 	}
 	q <- 0
 	mu.Unlock()

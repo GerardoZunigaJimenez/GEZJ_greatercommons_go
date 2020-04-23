@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 )
- var iterations = 100
+
+var iterations = 100
+
 /*
 https://greatercommons.com/learn/golang
- */
+*/
 func main() {
 	c := gen()
 	receive(c)
@@ -31,6 +33,5 @@ func receive(c <-chan int) {
 	for v := range c {
 		fmt.Println(v)
 	}
-
 
 }

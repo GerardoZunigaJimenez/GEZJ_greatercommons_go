@@ -4,7 +4,7 @@ import "fmt"
 
 /*
 https://play.golang.org/p/_DBRueImEq
- */
+*/
 func main() {
 	cr := make(chan int)
 

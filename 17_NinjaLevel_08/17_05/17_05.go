@@ -59,19 +59,19 @@ func main() {
 
 	users := []person{u1, u2, u3}
 
-	fmt.Println(printUser( users...) )
+	fmt.Println(printUser(users...))
 
-	for _,v:= range users  {
+	for _, v := range users {
 		sort.Strings(v.Sayings)
 	}
 
 	fmt.Printf("\n\n\t*************** Sorted Users by %T ***************\n", sortByAge{})
 	sort.Sort(sortByAge(users))
-	fmt.Println(printUser( users...) )
+	fmt.Println(printUser(users...))
 
 	fmt.Printf("\n\n\t*************** Sorted Users by %T ***************\n", sortByLast{})
 	sort.Sort(sortByLast(users))
-	fmt.Println(printUser( users...) )
+	fmt.Println(printUser(users...))
 }
 
 func printUser(people ...person) string {

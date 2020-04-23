@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 func main() {
@@ -29,11 +29,11 @@ func boring(msg string) <-chan string { // Returns receive-only channel of strin
 func fanIn(input1, input2 <-chan string) <-chan string {
 	c := make(chan string)
 	go func() {
-		for{
+		for {
 			select {
-			case s := <- input1:
+			case s := <-input1:
 				c <- s
-			case s := <- input2:
+			case s := <-input2:
 				c <- s
 			}
 		}
@@ -41,5 +41,3 @@ func fanIn(input1, input2 <-chan string) <-chan string {
 
 	return c
 }
-
-

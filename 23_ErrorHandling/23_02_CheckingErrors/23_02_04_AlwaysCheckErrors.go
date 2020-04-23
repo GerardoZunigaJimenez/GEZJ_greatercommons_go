@@ -1,21 +1,21 @@
 package main
 
 import (
-	"os"
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
-func main(){
+func main() {
 	f, err := os.Open("names.txt")
-	if err != nil{
+	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	defer  f.Close()
+	defer f.Close()
 
 	bs, err := ioutil.ReadAll(f)
-	if err != nil{
+	if err != nil {
 		fmt.Println(err)
 	}
 

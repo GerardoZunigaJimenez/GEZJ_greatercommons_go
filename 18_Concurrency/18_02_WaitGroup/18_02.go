@@ -26,13 +26,13 @@ func main() {
 
 func foo() {
 	for i := 0; i < 10; i++ {
-		fmt.Println("foo",i)
+		fmt.Println("foo", i)
 	}
 	wg.Done()
 }
 
-func bar(){
-	for i:= 0; i <10; i++{
-		fmt.Println("bar",i)
+func bar() {
+	for i := 0; i < 10; i++ {
+		fmt.Println("bar", i)
 	}
 }

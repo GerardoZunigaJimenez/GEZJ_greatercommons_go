@@ -5,13 +5,13 @@ import (
 	"log"
 )
 
-type norgateMathError struct{
-	lat string
+type norgateMathError struct {
+	lat  string
 	long string
-	err error
+	err  error
 }
 
-func (n norgateMathError) Error() string{
+func (n norgateMathError) Error() string {
 	return fmt.Sprintf("a norgate math error occurred: %v %v %v", n.lat, n.long, n.err)
 }
 

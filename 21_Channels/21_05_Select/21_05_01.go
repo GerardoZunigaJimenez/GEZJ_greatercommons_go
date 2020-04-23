@@ -12,7 +12,7 @@ It's like a switch, but each case is a communication:
 - Selection blocks until one communication can proceed, which then does.
 - If multiple can proceed, select chooses pseudo-randomly.
 - A default clause, if present, executes immediately if no channel is ready.
- */
+*/
 func main() {
 	eve := make(chan int)
 	odd := make(chan int)

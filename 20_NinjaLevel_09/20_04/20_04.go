@@ -1,12 +1,12 @@
 package main
 
 import (
-	"sync"
-	"runtime"
 	"fmt"
+	"runtime"
+	"sync"
 )
 
-func main(){
+func main() {
 
 	const iterations = 100
 	counter := 0

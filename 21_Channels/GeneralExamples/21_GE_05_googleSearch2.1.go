@@ -1,21 +1,21 @@
 package main
 
 import (
-	"time"
-	"math/rand"
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 type result string
 
 /*
 Don't wait for slow servers. No locks. No condition variables. No callbacks.
- */
+*/
 func google(query string) (results []result) {
 	c := make(chan result)
-	go func() { c <- web(query) } ()
-	go func() { c <- image(query) } ()
-	go func() { c <- video(query) } ()
+	go func() { c <- web(query) }()
+	go func() { c <- image(query) }()
+	go func() { c <- video(query) }()
 
 	timeout := time.After(80 * time.Millisecond)
 	for i := 0; i < 3; i++ {

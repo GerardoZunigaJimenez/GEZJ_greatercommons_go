@@ -22,8 +22,8 @@ func sum(xi ...int) int {
 	return total
 }
 
-func even(f func(xi ...int) int, vi ... int) int {
-	var yi [] int
+func even(f func(xi ...int) int, vi ...int) int {
+	var yi []int
 	for _, v := range vi {
 		if v%2 == 0 {
 			yi = append(yi, v)
@@ -32,8 +32,8 @@ func even(f func(xi ...int) int, vi ... int) int {
 	return f(yi...)
 }
 
-func odd(f func(xi ...int) int, vi ... int) int {
-	var yi [] int
+func odd(f func(xi ...int) int, vi ...int) int {
+	var yi []int
 	for _, v := range vi {
 		if v%2 != 0 {
 			yi = append(yi, v)

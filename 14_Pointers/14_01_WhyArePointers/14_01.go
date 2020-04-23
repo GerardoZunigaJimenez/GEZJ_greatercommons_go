@@ -8,20 +8,18 @@ func main() {
 
 	a := 42
 	fmt.Println("\nVAR")
-	fmt.Println("\t'a' value:",a)
+	fmt.Println("\t'a' value:", a)
 	fmt.Println("\t'a' address:", &a) // '&' gives you the address
 
 	fmt.Printf("\t'a' value type: %T\n", a)
 	fmt.Printf("\t'a' address from a var: %T\n", &a)
 	fmt.Println("\t'a' deferencing address of a var: ", *&a)
 
-
 	fmt.Println("\nPointer")
 	var b *int = &a
 	fmt.Println("\t'b' value: ", b)
 	fmt.Printf("\t'b' type: %T\n", b)
-	fmt.Println("\t'b' deferencing address: ", *b)  // '*' gives you the value stored at an address when you have an address
-
+	fmt.Println("\t'b' deferencing address: ", *b) // '*' gives you the value stored at an address when you have an address
 
 	fmt.Println("\nPointer")
 	c := &a

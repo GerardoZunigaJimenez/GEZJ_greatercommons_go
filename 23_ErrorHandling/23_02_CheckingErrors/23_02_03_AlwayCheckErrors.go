@@ -1,13 +1,13 @@
 package main
 
 import (
-	"os"
 	"fmt"
-	"strings"
 	"io"
+	"os"
+	"strings"
 )
 
-func main(){
+func main() {
 	f, err := os.Create("names.txt")
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -16,7 +16,7 @@ func main(){
 
 	defer f.Close()
 
-	r:=strings.NewReader("James Bond")
+	r := strings.NewReader("James Bond")
 	io.Copy(f, r)
 	fmt.Println("Bye")
 }

@@ -1,17 +1,17 @@
 package main
 
 import (
-	"os"
 	"fmt"
 	"log"
+	"os"
 )
 
-func main(){
+func main() {
 	_, err := os.Open("no-file.txt")
-	if err != nil{
+	if err != nil {
 		//fmt.Println("fmt: err happened", err)
 		//log.Println("log err happened", err)
-		log.Fatalln("fatal err happened",err)
+		log.Fatalln("fatal err happened", err)
 		log.Panicln("panic err append", err)
 
 		fmt.Println("I'm still alive")
@@ -22,5 +22,5 @@ func main(){
 
 /*
 the fatal functions call os.Exit(1) after writing the log message
- */
- //Fatalln is equivalent to Println followed by a call to ox.Exit(1)
+*/
+//Fatalln is equivalent to Println followed by a call to ox.Exit(1)

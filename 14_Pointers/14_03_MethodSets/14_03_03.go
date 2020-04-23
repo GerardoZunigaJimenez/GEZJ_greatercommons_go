@@ -13,12 +13,10 @@ import (
 //    a NON-POINTER RECEIVER works with values that are POINTERS or NON-POINTERS.
 //    a POINTER RECEIVER only works with values that are POINTERS.
 
-
 //     Receivers   |    Values
 //-----------------|------------------
 //     (t T)       |    T and *T
 //     (t *T)      |     *T
-
 
 // this will not work.  a pointer receiver receiving a value instead of an address
 type circle struct {

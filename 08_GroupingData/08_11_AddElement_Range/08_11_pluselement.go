@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	m := map[string] int{"James":32,"Miss Moneypenny":27,}
+	m := map[string]int{"James": 32, "Miss Moneypenny": 27}
 
 	fmt.Println(m)
 	fmt.Println(m["James"])
@@ -23,13 +23,13 @@ func main() {
 
 	fmt.Println()
 	m["todd"] = 33
-	for k, v := range m{
-		fmt.Printf("Key: %v  value: %v\n",k,v)
+	for k, v := range m {
+		fmt.Printf("Key: %v  value: %v\n", k, v)
 	}
 
 	fmt.Println()
-	xi := []int{4,5,7,8,9,42}
-	for i, v := range xi{
-		fmt.Println(i,v)
+	xi := []int{4, 5, 7, 8, 9, 42}
+	for i, v := range xi {
+		fmt.Println(i, v)
 	}
 }

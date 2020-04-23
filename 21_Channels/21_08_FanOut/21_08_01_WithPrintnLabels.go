@@ -46,7 +46,7 @@ func fanOutIn(c1, c2 chan int) {
 func timeConsumingWork(n int) int {
 	time.Sleep(time.Microsecond * time.Duration(rand.Intn(500)))
 
-	 t := n + rand.Intn(1000)
-	fmt.Printf("\ttimeConsumingWork, n: %d  time: %d \n", n, t )
+	t := n + rand.Intn(1000)
+	fmt.Printf("\ttimeConsumingWork, n: %d  time: %d \n", n, t)
 	return t
 }

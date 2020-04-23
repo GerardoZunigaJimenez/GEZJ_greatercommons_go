@@ -6,9 +6,9 @@ import (
 )
 
 type user struct {
-	First   string `json:"Name"`
-	Last    string `json:"LastName"`
-	Age     int		`json:"Age"`
+	First   string   `json:"Name"`
+	Last    string   `json:"LastName"`
+	Age     int      `json:"Age"`
 	Sayings []string `json:"Sayings"`
 }
 
@@ -53,20 +53,18 @@ func main() {
 	}
 	fmt.Println(string(bs))
 
-
 	var people []user
 	err = json.Unmarshal(bs, &people)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-
 	fmt.Println()
 	fmt.Println()
-	for _, v := range people{
+	for _, v := range people {
 		fmt.Println("User: ", v.First, v.Last, " with ", v.Age, " years old, hast the sayings: ")
-		for _, s := range v.Sayings  {
-			fmt.Println("\t\t",s)
+		for _, s := range v.Sayings {
+			fmt.Println("\t\t", s)
 		}
 		fmt.Println()
 	}

@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	favSport := "climbing"
-	switch favSport{
+	switch favSport {
 	case "soccer":
 		fmt.Println("soccer")
 	case "basquetball":
@@ -12,7 +12,7 @@ func main() {
 	case "hockey":
 		fmt.Println("hockey")
 	case "climbing":
-	fmt.Println("climbing")
+		fmt.Println("climbing")
 	default:
 		fmt.Println("climbing is the only real sport")
 	}

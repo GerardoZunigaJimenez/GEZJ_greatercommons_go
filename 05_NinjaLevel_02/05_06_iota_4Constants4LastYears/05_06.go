@@ -8,6 +8,7 @@ const (
 	year3
 	year4
 )
+
 func main() {
 	fmt.Println(year1)
 	fmt.Println(year2)

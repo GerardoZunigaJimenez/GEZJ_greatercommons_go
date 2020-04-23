@@ -21,7 +21,7 @@ got
 
 https://godoc.org/testing
 http://www.golang-book.com/books/intro/12
- */
+*/
 func main() {
 	fmt.Println("2 + 3 =", mySum(2, 3))
 	fmt.Println("4 + 7 =", mySum(4, 7))

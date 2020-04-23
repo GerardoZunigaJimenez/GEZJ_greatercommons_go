@@ -1,9 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"log"
-	"errors"
 )
 
 type sqrtError struct {

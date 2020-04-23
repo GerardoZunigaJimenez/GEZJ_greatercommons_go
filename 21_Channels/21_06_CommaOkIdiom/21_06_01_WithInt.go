@@ -46,4 +46,3 @@ func receive(even, odd, quit <-chan int) {
 		}
 	}
 }
-

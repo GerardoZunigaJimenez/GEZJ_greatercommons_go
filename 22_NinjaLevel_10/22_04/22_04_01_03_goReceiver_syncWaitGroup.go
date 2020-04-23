@@ -7,14 +7,13 @@ import (
 
 var iterations = 10
 
-
 //Synchronization
 var wg sync.WaitGroup
 var mu sync.Mutex
 var delta = 1
 
 func main() {
-	c := make(chan int, iterations )
+	c := make(chan int, iterations)
 	q := make(chan int, 1)
 	wg.Add(1)
 

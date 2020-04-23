@@ -12,10 +12,10 @@ func main() {
 	fmt.Println(bar())
 }
 
-func foo() int{
+func foo() int {
 	return rand.Int()
 }
 
-func bar() (int, string){
+func bar() (int, string) {
 	return rand.Int(), "Hello World"
 }

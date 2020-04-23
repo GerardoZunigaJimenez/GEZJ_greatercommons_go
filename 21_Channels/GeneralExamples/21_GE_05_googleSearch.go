@@ -1,9 +1,9 @@
 package main
 
 import (
-	"time"
-	"math/rand"
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 type result string
@@ -17,7 +17,7 @@ func google(query string) (results []result) {
 }
 
 var (
-	web = fakeSearch("web")
+	web   = fakeSearch("web")
 	image = fakeSearch("image")
 	video = fakeSearch("video")
 )

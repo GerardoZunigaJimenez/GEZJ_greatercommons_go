@@ -15,12 +15,12 @@ type secretAgent struct {
 
 func main() {
 	sa1 := secretAgent{
-			person: person{
-				"James",
-				"Bond",
-				32,
-			},
-			ltk: true,
+		person: person{
+			"James",
+			"Bond",
+			32,
+		},
+		ltk: true,
 	}
 
 	p2 := person{
@@ -33,7 +33,7 @@ func main() {
 	fmt.Println(p2)
 
 	fmt.Println()
-	fmt.Println("with sub attributes definition: ",sa1.person.first, sa1.person.last, sa1.person.age, sa1.ltk)
-	fmt.Println("without sub attibutes definition: R",sa1.first, sa1.last, sa1.age, sa1.ltk)
+	fmt.Println("with sub attributes definition: ", sa1.person.first, sa1.person.last, sa1.person.age, sa1.ltk)
+	fmt.Println("without sub attibutes definition: R", sa1.first, sa1.last, sa1.age, sa1.ltk)
 	fmt.Println(p2.first, p2.last, p2.age)
 }

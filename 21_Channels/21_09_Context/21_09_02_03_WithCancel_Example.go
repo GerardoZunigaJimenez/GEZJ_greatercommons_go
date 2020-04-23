@@ -41,4 +41,3 @@ func main() {
 	fmt.Println("error check 3:", ctx.Err())
 	fmt.Println("num gortins 3:", runtime.NumGoroutine())
 }
-

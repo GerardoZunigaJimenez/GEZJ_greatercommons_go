@@ -1,16 +1,16 @@
 package main
 
 import (
-	"time"
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 /*
 Timeout for whole conversation using select
 Create the timer once, outside the loop, to time out the entire conversation.
 (In the previous program, we had a timeout for each message.)
- */
+*/
 func main() {
 	c := fanIn(boring("Joe"), boring("Anne"))
 	timeout := time.After(5 * time.Second)

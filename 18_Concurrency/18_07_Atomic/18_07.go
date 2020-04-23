@@ -20,7 +20,7 @@ func main() {
 
 	for i := 0; i < gs; i++ {
 		go func() {
-			atomic.AddInt64(&counter,1)
+			atomic.AddInt64(&counter, 1)
 			fmt.Println("Counter", atomic.LoadInt64(&counter))
 			runtime.Gosched()
 			wg.Done()

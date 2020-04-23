@@ -6,7 +6,7 @@ import (
 
 /*
 https://play.golang.org/p/YHOMV9NYKK
- */
+*/
 func main() {
 	c := make(chan int, 1)
 

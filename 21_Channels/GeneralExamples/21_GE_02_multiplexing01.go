@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"time"
 	"math/rand"
+	"time"
 )
 
 func main() {
@@ -40,5 +40,3 @@ func fanIn(input1, input2 <-chan string) <-chan string {
 	}()
 	return c
 }
-
-

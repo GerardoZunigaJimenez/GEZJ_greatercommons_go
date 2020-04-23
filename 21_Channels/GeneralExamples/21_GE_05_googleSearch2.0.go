@@ -1,9 +1,9 @@
 package main
 
 import (
-	"time"
-	"math/rand"
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 type result string
@@ -13,7 +13,7 @@ Google Search 2.0
 Run the Web, Image, and Video searches concurrently, and wait for all results.
 
 No locks. No condition variables. No callbacks.
- */
+*/
 func google(query string) (results []result) {
 	c := make(chan result)
 	go func() { c <- web(query) }()

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"log"
+	"os"
 )
 
 /* Panic is equivalent to println followed by a call to panic()

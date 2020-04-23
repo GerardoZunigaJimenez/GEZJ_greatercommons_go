@@ -1,13 +1,13 @@
 package main
 
 import (
-	"os"
 	"log"
+	"os"
 )
 
-func main(){
+func main() {
 	_, err := os.Open("no-file.txt")
-	if err != nil{
+	if err != nil {
 		log.Fatal(err)
 	}
 }

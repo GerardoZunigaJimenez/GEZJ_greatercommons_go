@@ -5,8 +5,8 @@ import "fmt"
 func main() {
 	foo()
 	bar("James")
-	fmt.Println( woo("Moneypenny") )
-	fmt.Println( mouse("Ian", "Fleming"))
+	fmt.Println(woo("Moneypenny"))
+	fmt.Println(mouse("Ian", "Fleming"))
 }
 
 //Defying a function
@@ -25,7 +25,7 @@ func bar(s string) {
 
 //One Single Return
 func woo(s string) string {
-	return fmt.Sprint("Hello from woo, ",s)
+	return fmt.Sprint("Hello from woo, ", s)
 }
 
 //Multiple Returns
@@ -33,5 +33,5 @@ func woo(s string) string {
 func mouse(fn string, ln string) (string, bool) {
 	a := fmt.Sprint(fn, " ", ln, ` says "Hello"`)
 	b := false
-	return a,b
+	return a, b
 }

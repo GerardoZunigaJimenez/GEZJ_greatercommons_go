@@ -8,7 +8,6 @@ import "fmt"
 // none (the empty interface denoted by interface{}), then that TYPE implicitly implements the interface and is also
 // of that interface type. In Go, values can be of more than one type.
 
-
 // reference: https://www.ardanlabs.com/blog/2015/09/composition-with-go.html
 type person struct {
 	first string
@@ -57,8 +56,8 @@ func main() {
 	}
 
 	p1 := person{
-		first:"Dr.",
-		last:"Yes",
+		first: "Dr.",
+		last:  "Yes",
 	}
 
 	sa1.speak()

@@ -16,7 +16,6 @@ func (a byName) Len() int           { return len(a) }
 func (a byName) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a byName) Less(i, j int) bool { return a[i].First < a[j].First }
 
-
 func main() {
 	p1 := person{"James", 32}
 	p2 := person{"Moneypenny", 27}

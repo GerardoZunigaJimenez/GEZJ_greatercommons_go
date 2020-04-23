@@ -4,7 +4,7 @@ import "fmt"
 
 /*
 Data Table to test multiple scenarios
- */
+*/
 func main() {
 	fmt.Println("2 + 3 =", mySum(2, 3))
 	fmt.Println("4 + 7 =", mySum(4, 7))

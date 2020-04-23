@@ -6,12 +6,12 @@ func main() {
 	jb := []string{"james", "bond", "chocolate", "martini"}
 	fmt.Println(jb)
 
-	mp := []string{"miss","moneyPenny","Strawberry","Hazelnut"}
+	mp := []string{"miss", "moneyPenny", "Strawberry", "Hazelnut"}
 	fmt.Println(mp)
 
 	fmt.Println()
 
-	xp:= [][]string{jb,mp}
+	xp := [][]string{jb, mp}
 	fmt.Println(xp)
 
 }

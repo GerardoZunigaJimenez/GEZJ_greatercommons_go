@@ -13,9 +13,8 @@ func main() {
 	fmt.Println(x[3])
 	fmt.Println(x[4])
 
-
 	fmt.Println()
-	for i, v:= range x {
+	for i, v := range x {
 		fmt.Println(i, v)
 	}
 

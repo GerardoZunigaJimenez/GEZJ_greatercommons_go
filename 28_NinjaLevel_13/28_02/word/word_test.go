@@ -1,9 +1,9 @@
 package word
 
 import (
-"testing"
-"fmt"
-"strings"
+	"fmt"
+	"strings"
+	"testing"
 )
 
 type test struct {
@@ -13,9 +13,9 @@ type test struct {
 }
 
 var sTest = []test{
-	test{"They are so fancy, and they need to be killed", 10, map[string]int{"they": 2, "are": 1, "so": 1, "fancy": 1, "and": 1, "need": 1, "to": 1, "be": 1, "killed": 1,}},
-	test{"Bla bla bla bla", 4, map[string]int{"bla": 4,}},
-	test{"Sometimes, someTimes, SoMeTiMeS; soMEtiMES. sometimes", 5,  map[string]int{"sometimes":5}},
+	test{"They are so fancy, and they need to be killed", 10, map[string]int{"they": 2, "are": 1, "so": 1, "fancy": 1, "and": 1, "need": 1, "to": 1, "be": 1, "killed": 1}},
+	test{"Bla bla bla bla", 4, map[string]int{"bla": 4}},
+	test{"Sometimes, someTimes, SoMeTiMeS; soMEtiMES. sometimes", 5, map[string]int{"sometimes": 5}},
 }
 
 func TestCountWordsByString(t *testing.T) {
@@ -28,7 +28,7 @@ func TestCountWordsByString(t *testing.T) {
 }
 
 func ExampleCountWordsByString() {
-	s :=CountWordsByString("Bla BLA bLa BLA")
+	s := CountWordsByString("Bla BLA bLa BLA")
 	fmt.Println(s)
 	// Output:
 	// 4
@@ -72,7 +72,7 @@ func ExampleUseCount() {
 }
 
 func BenchmarkUseCount(b *testing.B) {
-	for i:=0; i<b.N; i++{
+	for i := 0; i < b.N; i++ {
 		for i := 0; i < len(sTest); i++ {
 			m := UseCount(sTest[i].paragraph)
 
@@ -91,4 +91,3 @@ func BenchmarkUseCount(b *testing.B) {
 		}
 	}
 }
-

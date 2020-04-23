@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func main() {
 	s := "H"
 	fmt.Println(s)
 

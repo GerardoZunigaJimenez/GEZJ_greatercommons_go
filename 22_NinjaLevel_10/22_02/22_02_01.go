@@ -4,7 +4,7 @@ import "fmt"
 
 /*
 https://play.golang.org/p/oB-p3KMiH6
- */
+*/
 func main() {
 	cs := make(chan int)
 

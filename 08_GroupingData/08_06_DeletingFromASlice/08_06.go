@@ -9,8 +9,8 @@ func main() {
 	x = append(x, 77, 88, 99, 1014)
 	fmt.Println(x)
 
-	// "..." means variadic -> 
-	y := []int{234,456,648,987}
+	// "..." means variadic ->
+	y := []int{234, 456, 648, 987}
 	x = append(x, y...)
 	fmt.Println(x)
 

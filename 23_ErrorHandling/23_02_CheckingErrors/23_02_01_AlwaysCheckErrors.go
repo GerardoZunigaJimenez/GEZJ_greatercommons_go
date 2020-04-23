@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	n, err := fmt.Println("Hello")
-	if err != nil{
+	if err != nil {
 		fmt.Println(err)
 	}
 	fmt.Println(n)

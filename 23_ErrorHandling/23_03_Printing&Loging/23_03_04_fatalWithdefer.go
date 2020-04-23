@@ -1,9 +1,9 @@
 package main
 
 import (
-	"os"
-	"log"
 	"fmt"
+	"log"
+	"os"
 )
 
 //the fatal functions call os.Exit(1) after writing the log message

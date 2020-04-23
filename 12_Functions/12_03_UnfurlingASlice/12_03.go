@@ -7,7 +7,7 @@ func main() {
 	//The code is taking the slice and sending value by value like arguments
 	fmt.Println("The total sum is:", sum("James", xi...))
 	fmt.Println()
-	fmt.Println("The total for 2nd sum is:", sum("James", ))
+	fmt.Println("The total for 2nd sum is:", sum("James"))
 
 }
 

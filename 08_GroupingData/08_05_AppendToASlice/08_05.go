@@ -10,7 +10,7 @@ func main() {
 	fmt.Println(x)
 
 	// "..." means variadic ->
-	y := []int{234,456,648,987}
+	y := []int{234, 456, 648, 987}
 	x = append(x, y...)
 	fmt.Println(x)
 }
