@@ -21,6 +21,7 @@ func main() {
 	fmt.Println()
 	fmt.Println("CPUs", runtime.NumCPU())
 	fmt.Println("Go Routines: ", runtime.NumGoroutine())
+
 	wg.Wait()
 }
 
